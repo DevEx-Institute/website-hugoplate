@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic"
+  command = "hugo --gc --templateMetrics --templateMetricsHints"
 
 [build.environment]
   HUGO_VERSION = "0.121.2"
@@ -12,17 +12,17 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
-  command = "hugo --gc --enableGitInfo"
+  command = "hugo --gc --enableGitInfo --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
 
   [context.split1.environment]
     HUGO_ENV = "production"
 
 [context.deploy-preview]
 #  command = "hugo --gc --buildFuture -b $DEPLOY_PRIME_URL"
-  command = "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify"
+  command = "hugo --gc --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
 
 [context.branch-deploy]
-  command = "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify"
+  command = "hugo --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
 
 [context.next.environment]
   HUGO_ENABLEGITINFO = "true"
