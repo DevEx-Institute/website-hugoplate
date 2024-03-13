@@ -1,38 +1,46 @@
 [build]
   publish = "public"
-  command = "hugo --gc --templateMetrics --templateMetricsHints"
+  command = "hugo"
 
 [build.environment]
   HUGO_VERSION = "0.121.2"
   GO_VERSION = "1.20.5"
 
+# [build]
+#   publish = "public"
+#   command = "hugo --gc --templateMetrics --templateMetricsHints"
 
-[context.production.environment]
-  HUGO_ENV           = "production"
-  HUGO_ENABLEGITINFO = "true"
+# [build.environment]
+#   HUGO_VERSION = "0.121.2"
+#   GO_VERSION = "1.20.5"
 
-[context.split1]
-  command = "hugo --gc --enableGitInfo --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
 
-  [context.split1.environment]
-    HUGO_ENV = "production"
+# [context.production.environment]
+#   HUGO_ENV           = "production"
+#   HUGO_ENABLEGITINFO = "true"
 
-[context.deploy-preview]
-#  command = "hugo --gc --buildFuture -b $DEPLOY_PRIME_URL"
-  command = "hugo --gc --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
+# [context.split1]
+#   command = "hugo --gc --enableGitInfo --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
 
-[context.branch-deploy]
-  command = "hugo --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
+#   [context.split1.environment]
+#     HUGO_ENV = "production"
 
-[context.next.environment]
-  HUGO_ENABLEGITINFO = "true"
+# [context.deploy-preview]
+# #  command = "hugo --gc --buildFuture -b $DEPLOY_PRIME_URL"
+#   command = "hugo --gc --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
 
-[[redirects]]
-  from   = "/chat-with-team"
-  to     = "https://calendly.com/devex-institute/60min-chat-with-the-team"
-  status = 302
+# [context.branch-deploy]
+#   command = "hugo --templateMetrics --templateMetricsHints --buildFuture --buildDrafts"
 
-[[redirects]]
-  from   = "/get-a-drink"
-  to     = "/meet-the-team"
-  status = 302
+# [context.next.environment]
+#   HUGO_ENABLEGITINFO = "true"
+
+# [[redirects]]
+#   from   = "/chat-with-team"
+#   to     = "https://calendly.com/devex-institute/60min-chat-with-the-team"
+#   status = 302
+
+# [[redirects]]
+#   from   = "/get-a-drink"
+#   to     = "/meet-the-team"
+#   status = 302
