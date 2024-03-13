@@ -1,0 +1,38 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic"
+
+[build.environment]
+  HUGO_VERSION = "0.121.2"
+  GO_VERSION = "1.20.5"
+
+
+[context.production.environment]
+  HUGO_ENV           = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+  command = "hugo --gc --enableGitInfo"
+
+  [context.split1.environment]
+    HUGO_ENV = "production"
+
+[context.deploy-preview]
+#  command = "hugo --gc --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify"
+
+[context.branch-deploy]
+  command = "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify"
+
+[context.next.environment]
+  HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from   = "/chat-with-team"
+  to     = "https://calendly.com/devex-institute/60min-chat-with-the-team"
+  status = 302
+
+[[redirects]]
+  from   = "/get-a-drink"
+  to     = "/meet-the-team"
+  status = 302
