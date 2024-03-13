@@ -1,0 +1,4 @@
+########################### Services #############################
+[services]
+[services.googleAnalytics]
+ID = 'G-BNBKE8JCEF' # see https://gohugo.io/templates/internal/#configure-google-analytics
