@@ -54,12 +54,10 @@ member:
     content: "Jessica West boasts an impressive two-decade career encompassing management, marketing, sales, and engineering roles. She is renowned for her results-driven approach and the ability to galvanize teams for operational excellence. Jessica is a master collaborator, seamlessly bridging the gap between diverse teams and domains, from product development to marketing and engineering. Her unwavering commitment to outcomes and high-impact leadership make her a go-to choice for organizations seeking transformative change. With a passion for community building, Jessica’s visionary leadership extends beyond her professional life, creating serendipitous connections and generously sharing her expertise. She is a captivating speaker, influencer, and brand ambassador known for her ability to make technical concepts meaningful and memorable. Jessica West is a dynamic force shaping the future of high-growth, high-performing companies."
     image: /images/team/jessica-west.jpg
     social:
-  - icon: ti-linkedin   # themify icon pack: https://themify.me/themify-icons
-    link: "https://linkedin.com/in/jessicagwest"
-    serviceAlt: LinkedIn - Jessica
-  - icon: ti-twitter-alt   # themify icon pack: https://themify.me/themify-icons
-    link: "https://twitter.com/jessicaewest"
-    serviceAlt: Twitter - Jessica
-
-
+    - icon: ti-linkedin   # themify icon pack: https://themify.me/themify-icons
+      link: "https://linkedin.com/in/jessicagwest"
+      serviceAlt: LinkedIn - Jessica
+    - icon: ti-twitter-alt   # themify icon pack: https://themify.me/themify-icons
+      link: "https://twitter.com/jessicaewest"
+      serviceAlt: Twitter - Jessica
 ---
